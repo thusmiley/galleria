@@ -19,7 +19,7 @@ Mobile Design
 ### Links
 
 - Git URL: https://github.com/thusmiley/galleria.git
-- Live Site URL: 
+- Live Site URL: https://thusmiley.github.io/galleria/
 
 
 ### Built with
