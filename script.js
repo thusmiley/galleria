@@ -35,4 +35,11 @@ for (x = 0; x < allItems.length; x++) {
   imagesLoaded(allItems[x], resizeInstance);
 }
 
-//
+//View image (lightbox)
+const lightbox = document.querySelector('.overlay')
+function viewImage() {
+  lightbox.classList.add('active');
+}
+function closeImage() {
+  lightbox.classList.remove('active');
+}

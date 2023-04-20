@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Galleria slideshow site" />
+    <meta name="keywords" content="HTML,CSS,JavaScript, API, Slideshow" />
+    <meta name="author" content="Thu Smiley" />
+    <meta property="og:image" content="./images/desktop-preview.jpg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Galleria slideshow site | Guernica</title>
+  </head>
+  <body>
+    <!-- HEADER  -->
+    <header>
+      <section class="container">
+        <a href="./index.html"
+          ><img src="./assets/shared/logo.svg" alt="" class="logo"
+        /></a>
+        <a class="start" href="./index.html">STOP SLIDESHOW</a>
+      </section>
+    </header>
+
+    <!-- MAIN  -->
+    <main>
+      <section class="container" id="detail">
+        <!-- Detail header  -->
+        <section class="detail-top">
+          <button class="view" onclick="viewImage()">
+            <img src="./assets/shared/icon-view-image.svg" alt="" />VIEW IMAGE
+          </button>
+          <picture id="hero-img">
+            <source
+              id="hero-large"
+              media="(min-width: 768px)"
+              srcset="./assets/guernica/hero-large.jpg"
+            />
+            <img
+              id="hero-small"
+              src="./assets/guernica/hero-small.jpg"
+              alt=""
+            />
+          </picture>
+          <div class="detail-heading">
+            <h1 id="painting-name">Guernica</h1>
+            <p id="painter-name">Pablo Picasso</p>
+            <img id="painter-pic" src="./assets/guernica/artist.jpg" alt="" />
+          </div>
+        </section>
+
+        <!-- Detail body content  -->
+        <section class="detail-bottom">
+          <h2 id="year">1937</h2>
+          <p id="description">
+            The scene occurs within a room where, on the left, a wide-eyed bull
+            stands over a grieving woman holding a dead child in her arms. In
+            the center of the room a horse falls in agony with a large gaping
+            hole in its side, as if it had just been run through by a spear or
+            javelin. The horse appears to be wearing chain mail armor, decorated
+            with vertical tally marks arranged in rows. A dead and dismembered
+            soldier lies under the horse. The hand of his severed right arm
+            grasps a shattered sword, from which a flower grows.
+          </p>
+          <a href="https://en.wikipedia.org/wiki/Guernica_(Picasso)" id="source"
+            >GO TO SOURCE</a
+          >
+        </section>
+      </section>
+    </main>
+
+    <!-- Slideshow controller -->
+    <section class="controller">
+      <div class="container">
+        <div class="progress-bar">
+          <div class="inner-bar progress-3"></div>
+        </div>
+        <div class="controller-wrapper">
+          <div class="controller-content">
+            <h3 id="painting-name">Guernica</h3>
+            <p id="painter-name">Pablo Picasso</p>
+          </div>
+          <div class="controller-nav">
+            <a href="./girl-with-pearl-earring.html"
+              ><img id="back" src="./assets/shared/icon-back-button.svg" alt=""
+            /></a>
+            <a href="./penitent-magdalene.html"
+              ><img id="next" src="./assets/shared/icon-next-button.svg" alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <section class="overlay">
+      <div class="container">
+        <div class="lightbox-wrapper">
+          <button class="close" onclick="closeImage()">CLOSE</button>
+          <img src="./assets/guernica/gallery.jpg" alt="" id="gallery-img" />
+        </div>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>

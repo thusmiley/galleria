@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Galleria slideshow site" />
+    <meta name="keywords" content="HTML,CSS,JavaScript, API, Slideshow" />
+    <meta name="author" content="Thu Smiley" />
+    <meta property="og:image" content="./images/desktop-preview.jpg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Galleria slideshow site | Lady with an Ermine</title>
+  </head>
+  <body>
+    <!-- HEADER  -->
+    <header>
+      <section class="container">
+        <a href="./index.html"
+          ><img src="./assets/shared/logo.svg" alt="" class="logo"
+        /></a>
+        <a class="start" href="./index.html">STOP SLIDESHOW</a>
+      </section>
+    </header>
+
+    <!-- MAIN  -->
+    <main>
+      <section class="container" id="detail">
+        <!-- Detail header  -->
+        <section class="detail-top">
+          <button class="view" onclick="viewImage()">
+            <img src="./assets/shared/icon-view-image.svg" alt="" />VIEW IMAGE
+          </button>
+          <picture id="hero-img">
+            <source
+              id="hero-large"
+              media="(min-width: 768px)"
+              srcset="./assets/lady-with-an-ermine/hero-large.jpg"
+            />
+            <img
+              id="hero-small"
+              src="./assets/lady-with-an-ermine/hero-small.jpg"
+              alt=""
+            />
+          </picture>
+          <div class="detail-heading">
+            <h1 id="painting-name">Lady with an Ermine</h1>
+            <p id="painter-name">Leonardo da Vinci</p>
+            <img id="painter-pic" src="./assets/lady-with-an-ermine/artist.jpg" alt="" />
+          </div>
+        </section>
+
+        <!-- Detail body content  -->
+        <section class="detail-bottom">
+          <h2 id="year">1489</h2>
+          <p id="description">
+            The Lady with an Ermine (Italian: Dama con l'ermellino [ˈdaːma kon lermelˈliːno]; Polish: Dama z gronostajem) is a portrait painting widely attributed to the Italian Renaissance artist Leonardo da Vinci. Dated to c. 1489–1491, the work is painted in oils on a panel of walnut wood. Its subject is Cecilia Gallerani, a mistress of Ludovico Sforza (\"Il Moro\"), Duke of Milan; Leonardo was painter to the Sforza court at the time of its execution. It is one of only four surviving portraits of women painted by Leonardo, the others being Ginevra de' Benci, La Belle Ferronnière and the Mona Lisa.
+          </p>
+          <a href="https://en.wikipedia.org/wiki/Lady_with_an_Ermine" id="source"
+            >GO TO SOURCE</a
+          >
+        </section>
+      </section>
+    </main>
+
+    <!-- Slideshow controller -->
+    <section class="controller">
+      <div class="container">
+        <div class="progress-bar">
+          <div class="inner-bar progress-9"></div>
+        </div>
+        <div class="controller-wrapper">
+          <div class="controller-content">
+            <h3 id="painting-name">Lady with an Ermine</h3>
+            <p id="painter-name">Leonardo da Vinci</p>
+          </div>
+          <div class="controller-nav">
+            <a href="./the-sleeping-gypsy.html"
+              ><img id="back" src="./assets/shared/icon-back-button.svg" alt=""
+            /></a>
+            <a href="./the-night-cafe.html"
+              ><img id="next" src="./assets/shared/icon-next-button.svg" alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <section class="overlay">
+      <div class="container">
+        <div class="lightbox-wrapper">
+          <button class="close" onclick="closeImage()">CLOSE</button>
+          <img src="./assets/lady-with-an-ermine/gallery.jpg" />
+        </div>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>

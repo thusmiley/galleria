@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Galleria slideshow site" />
+    <meta name="keywords" content="HTML,CSS,JavaScript, API, Slideshow" />
+    <meta name="author" content="Thu Smiley" />
+    <meta property="og:image" content="./images/desktop-preview.jpg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Galleria slideshow site | The Swing</title>
+  </head>
+  <body>
+    <!-- HEADER  -->
+    <header>
+      <section class="container">
+        <a href="./index.html"
+          ><img src="./assets/shared/logo.svg" alt="" class="logo"
+        /></a>
+        <a class="start" href="./index.html">STOP SLIDESHOW</a>
+      </section>
+    </header>
+
+    <!-- MAIN  -->
+    <main>
+      <section class="container" id="detail">
+        <!-- Detail header  -->
+        <section class="detail-top">
+          <button class="view" onclick="viewImage()">
+            <img src="./assets/shared/icon-view-image.svg" alt="" />VIEW IMAGE
+          </button>
+          <picture id="hero-img">
+            <source
+              id="hero-large"
+              media="(min-width: 768px)"
+              srcset="./assets/the-swing/hero-large.jpg"
+            />
+            <img
+              id="hero-small"
+              src="./assets/the-swing/hero-small.jpg"
+              alt=""
+            />
+          </picture>
+          <div class="detail-heading">
+            <h1 id="painting-name">The Swing</h1>
+            <p id="painter-name">Jean-Honoré Fragonard</p>
+            <img id="painter-pic" src="./assets/the-swing/artist.jpg" alt="" />
+          </div>
+        </section>
+
+        <!-- Detail body content  -->
+        <section class="detail-bottom">
+          <h2 id="year">1767</h2>
+          <p id="description">
+            The painting depicts an elegant young woman on a swing. A smiling
+            young man, hiding in the bushes on the left, watches her from a
+            vantage point that allows him to see up into her billowing dress,
+            where his arm is pointed with hat in hand. A smiling older man, who
+            is nearly hidden in the shadows on the right, propels the swing with
+            a pair of ropes. The older man appears to be unaware of the young
+            man. As the young lady swings high, she throws her left leg up,
+            allowing her dainty shoe to fly through the air.
+          </p>
+          <a
+            href="https://en.wikipedia.org/wiki/The_Swing_(Fragonard)"
+            id="source"
+            >GO TO SOURCE</a
+          >
+        </section>
+      </section>
+    </main>
+
+    <!-- Slideshow controller -->
+    <section class="controller">
+      <div class="container">
+        <div class="progress-bar">
+          <div class="inner-bar progress-15"></div>
+        </div>
+        <div class="controller-wrapper">
+          <div class="controller-content">
+            <h3 id="painting-name">The Swing</h3>
+            <p id="painter-name">Jean-Honoré Fragonard</p>
+          </div>
+          <div class="controller-nav">
+            <a href="./mona-lisa.html"
+              ><img id="back" src="./assets/shared/icon-back-button.svg" alt=""
+            /></a>
+            <a href="./starry-night.html"
+              ><img id="next" src="./assets/shared/icon-next-button.svg" alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <section class="overlay">
+      <div class="container">
+        <div class="lightbox-wrapper">
+          <button class="close" onclick="closeImage()">CLOSE</button>
+          <img src="./assets/the-swing/gallery.jpg" />
+        </div>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>

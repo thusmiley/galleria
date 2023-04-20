@@ -9,7 +9,7 @@ $almost-white: #f3f3f3
 body
     font-family: 'Libre Baskerville', serif
     position: relative
-    text-rendering: optimizeLegibility
+    text-rendering: optimizeSpeed
 h1, h2, h3, h4, h5, h6
     font-weight: 700
     color: white 
@@ -81,8 +81,13 @@ header a
     cursor: pointer
 .card:hover
     background-color: rgba(255, 255, 255, 0.5)
-.card-content
-    // height: 100%
+.link
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    z-index: 1
 #painting-thumbnail
     position: relative
     width: 100%
@@ -126,7 +131,7 @@ header a
     letter-spacing: 2.14px
     cursor: pointer
 .view:hover
-    background-color: rgba(0,0,0,0.25)
+    background-color: rgba(255,255,255,0.25)
 .view img
     margin-right: 14px
 .detail-heading
@@ -169,7 +174,6 @@ header a
     font-weight: 700
 .controller
     margin-top: 67px
-    border-top: 1px solid $light-gray
 .controller-wrapper, .controller-nav
     display: flex
     align-items: center
@@ -184,7 +188,7 @@ header a
     margin-bottom: 9px
 .controller #painter-name
     font-size: 10px
-.controller-nav img:not(:last-child)
+.controller-nav a:not(:last-child)
     margin-right: 23px
 .controller-nav img
     cursor: pointer
@@ -208,7 +212,7 @@ header a
     #painter-pic
         width: 128px
         bottom: -128px
-        left: 270px
+        left: 262px
     .detail-heading #painting-name
         font-size: 56px
         line-height: 64px
@@ -235,7 +239,7 @@ header a
         font-size: 13px
     .controller-nav img
         width: 25px
-    .controller-nav img:not(:last-child)
+    .controller-nav a:not(:last-child)
         margin-right: 40px
 @media only screen and (min-width: 1440px)
     .detail-top, .detail-bottom
@@ -246,6 +250,7 @@ header a
         align-items: center
     .detail-top
         width: 65%
+        position: relative
     .detail-bottom
         width: 35%
     .detail-heading
@@ -253,8 +258,10 @@ header a
         padding: 0 65px 65px 65px
         min-width: auto
     #painter-pic
-        bottom: -380px
-        left: 90px
+        bottom: unset
+        top: 496px
+        max-height: 560px
+        left: 95px
     #year
         top: 0
     #description
@@ -276,26 +283,66 @@ header a
     right: 0
     bottom: 0
     display: none
+.overlay.active
+    display: block
 .overlay .container
-    position: absolute
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-.lightbox-wrapper
-    display: flex
-    flex-direction: column
     height: 100vh
-    width: fit-content
-    justify-content: center
+    display: flex
+    overflow: scroll
+.lightbox-wrapper
     position: relative
-    margin: auto
+    margin: auto 
+    max-height: 490px
+    background-color: orange
 .close
+    position: absolute
     background-color: transparent
     border: none
     color: white 
     font-size: 14px
-    margin-bottom: 33px
-    text-align: right
+    top: -50px
+    right: 0
 .close:hover
-    color: rgba(155, 255, 255, 0.25)
+    color: rgba(255, 255, 255, 0.25)
+@media only screen and (min-width: 768px)
+    .lightbox-wrapper
+        max-width: 670px
+        max-height: 80vh
+//PROGRESS BAR
+.progress-bar
+    position: relative
+    height: 1px
+    background-color: $light-gray
+.inner-bar
+    background-color: black
+    height: 1px
+.progress-1
+    width: 6.7%
+.progress-2
+    width: 13.3%
+.progress-3
+    width: 20%
+.progress-4
+    width: 26.7%
+.progress-5
+    width: 33.3%
+.progress-6
+    width: 40%
+.progress-7
+    width: 46.7%
+.progress-8
+    width: 53.3%
+.progress-9
+    width: 60%
+.progress-10
+    width: 66.7%
+.progress-11
+    width: 73.3%
+.progress-12
+    width: 80%
+.progress-13
+    width: 86.7%
+.progress-14
+    width: 93.3%
+.progress-15
+    width: 100%

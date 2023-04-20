@@ -11,7 +11,6 @@
 Galleria Slideshow
 
 ### Screenshot
-Mobile Design
 
 ![](./assets/preview.jpg)
 

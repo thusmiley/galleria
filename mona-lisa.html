@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Galleria slideshow site" />
+    <meta name="keywords" content="HTML,CSS,JavaScript, API, Slideshow" />
+    <meta name="author" content="Thu Smiley" />
+    <meta property="og:image" content="./images/desktop-preview.jpg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Galleria slideshow site | Mona Lisa</title>
+  </head>
+  <body>
+    <!-- HEADER  -->
+    <header>
+      <section class="container">
+        <a href="./index.html"
+          ><img src="./assets/shared/logo.svg" alt="" class="logo"
+        /></a>
+        <a class="start" href="./index.html">STOP SLIDESHOW</a>
+      </section>
+    </header>
+
+    <!-- MAIN  -->
+    <main>
+      <section class="container" id="detail">
+        <!-- Detail header  -->
+        <section class="detail-top">
+          <button class="view" onclick="viewImage()">
+            <img src="./assets/shared/icon-view-image.svg" alt="" />VIEW IMAGE
+          </button>
+          <picture id="hero-img">
+            <source
+              id="hero-large"
+              media="(min-width: 768px)"
+              srcset="./assets/mona-lisa/hero-large.jpg"
+            />
+            <img
+              id="hero-small"
+              src="./assets/mona-lisa/hero-small.jpg"
+              alt=""
+            />
+          </picture>
+          <div class="detail-heading">
+            <h1 id="painting-name">Mona Lisa</h1>
+            <p id="painter-name">Leonardo da Vinci</p>
+            <img id="painter-pic" src="./assets/mona-lisa/artist.jpg" alt="" />
+          </div>
+        </section>
+
+        <!-- Detail body content  -->
+        <section class="detail-bottom">
+          <h2 id="year">1503</h2>
+          <p id="description">
+            The Mona Lisa (/ˌmoʊnə ˈliːsə/; italian: La Gioconda [la dʒoˈkonda] or Monna Lisa [ˈmɔnna ˈliːza]) is a half-length portrait painting by Italian artist Leonardo da Vinci. Considered an archetypal masterpiece of the Italian Renaissance, it has been described as \"the best known, the most visited, the most written about, the most sung about, the most parodied work of art in the world\". The painting's novel qualities include the subject's enigmatic expression, the monumentality of the composition, the subtle modelling of forms, and the atmospheric illusionism.
+          </p>
+          <a href="https://en.wikipedia.org/wiki/Mona_Lisa" id="source"
+            >GO TO SOURCE</a
+          >
+        </section>
+      </section>
+    </main>
+
+    <!-- Slideshow controller -->
+    <section class="controller">
+      <div class="container">
+        <div class="progress-bar">
+          <div class="inner-bar progress-14"></div>
+        </div>
+        <div class="controller-wrapper">
+          <div class="controller-content">
+            <h3 id="painting-name">Mona Lisa</h3>
+            <p id="painter-name">Leonardo da Vinci</p>
+          </div>
+          <div class="controller-nav">
+            <a href="./arnolfini-portrait.html"
+              ><img id="back" src="./assets/shared/icon-back-button.svg" alt=""
+            /></a>
+            <a href="./the-swing.html"
+              ><img id="next" src="./assets/shared/icon-next-button.svg" alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <section class="overlay">
+      <div class="container">
+        <div class="lightbox-wrapper">
+          <button class="close" onclick="closeImage()">CLOSE</button>
+          <img src="./assets/mona-lisa/gallery.jpg" />
+        </div>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>

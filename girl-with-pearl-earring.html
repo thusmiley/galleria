@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Galleria slideshow site" />
+    <meta name="keywords" content="HTML,CSS,JavaScript, API, Slideshow" />
+    <meta name="author" content="Thu Smiley" />
+    <meta property="og:image" content="./images/desktop-preview.jpg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Galleria slideshow site | Girl with a Pearl Earring</title>
+  </head>
+  <body>
+    <!-- HEADER  -->
+    <header>
+      <section class="container">
+        <a href="./index.html"
+          ><img src="./assets/shared/logo.svg" alt="" class="logo"
+        /></a>
+        <a class="start" href="./index.html">STOP SLIDESHOW</a>
+      </section>
+    </header>
+
+    <!-- MAIN  -->
+    <main>
+      <section class="container" id="detail">
+        <!-- Detail header  -->
+        <section class="detail-top">
+          <button class="view" onclick="viewImage()">
+            <img src="./assets/shared/icon-view-image.svg" alt="" />VIEW IMAGE
+          </button>
+          <picture id="hero-img">
+            <source
+              id="hero-large"
+              media="(min-width: 768px)"
+              srcset="./assets/girl-with-pearl-earring/hero-large.jpg"
+            />
+            <img
+              id="hero-small"
+              src="./assets/girl-with-pearl-earring/hero-small.jpg"
+              alt=""
+            />
+          </picture>
+          <div class="detail-heading">
+            <h1 id="painting-name">Girl with a Pearl Earring</h1>
+            <p id="painter-name">Johannes Vermeer</p>
+            <img
+              id="painter-pic"
+              src="./assets/girl-with-pearl-earring/artist.jpg"
+              alt=""
+            />
+          </div>
+        </section>
+
+        <!-- Detail body content  -->
+        <section class="detail-bottom">
+          <h2 id="year">1665</h2>
+          <p id="description">
+            The painting is a tronie, the Dutch 17th-century description of a 'head' that was not meant to be a portrait. It depicts a European girl wearing an exotic dress, an oriental turban, and what was thought to be a very large pearl as an earring. In 2014, Dutch astrophysicist Vincent Icke raised doubts about the material of the earring and argued that it looks more like polished tin than pearl on the grounds of the specular reflection, the pear shape and the large size of the earring.
+          </p>
+          <a href="https://en.wikipedia.org/wiki/Girl_with_a_Pearl_Earring" id="source"
+            >GO TO SOURCE</a
+          >
+        </section>
+      </section>
+    </main>
+
+    <!-- Slideshow controller -->
+    <section class="controller">
+      <div class="container">
+        <div class="progress-bar">
+          <div class="inner-bar progress-2"></div>
+        </div>
+        <div class="controller-wrapper">
+          <div class="controller-content">
+            <h3 id="painting-name">Girl with a Pearl Earring</h3>
+            <p id="painter-name">Johannes Vermeer</p>
+          </div>
+          <div class="controller-nav">
+            <a href="./starry-night.html"><img id="back" src="./assets/shared/icon-back-button.svg" alt="" /></a>
+            <a href="./guernica.html"><img id="next" src="./assets/shared/icon-next-button.svg" alt="" /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <section class="overlay">
+      <div class="container">
+        <div class="lightbox-wrapper">
+          <button class="close" onclick="closeImage()">CLOSE</button>
+          <img
+            src="./assets/girl-with-pearl-earring/gallery.jpg"
+            alt=""
+            id="gallery-img"
+          />
+        </div>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>

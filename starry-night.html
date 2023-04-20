@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Galleria slideshow site" />
+    <meta name="keywords" content="HTML,CSS,JavaScript, API, Slideshow" />
+    <meta name="author" content="Thu Smiley" />
+    <meta property="og:image" content="./images/desktop-preview.jpg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Galleria slideshow site | Starry Night</title>
+  </head>
+  <body>
+    <!-- HEADER  -->
+    <header>
+      <section class="container">
+        <a href="./index.html"
+          ><img src="./assets/shared/logo.svg" alt="" class="logo"
+        /></a>
+        <a class="start" href="./index.html">STOP SLIDESHOW</a>
+      </section>
+    </header>
+
+    <!-- MAIN  -->
+    <main>
+      <section class="container" id="detail">
+        <!-- Detail header  -->
+        <section class="detail-top">
+          <button class="view" onclick="viewImage()">
+            <img src="./assets/shared/icon-view-image.svg" alt="" />VIEW IMAGE
+          </button>
+          <picture id="hero-img">
+            <source
+              id="hero-large"
+              media="(min-width: 768px)"
+              srcset="./assets/starry-night/hero-large.jpg"
+            />
+            <img
+              id="hero-small"
+              src="./assets/starry-night/hero-small.jpg"
+              alt=""
+            />
+          </picture>
+          <div class="detail-heading">
+            <h1 id="painting-name">Starry Night</h1>
+            <p id="painter-name">Vincent Van Gogh</p>
+            <img
+              id="painter-pic"
+              src="./assets/starry-night/artist.jpg"
+              alt=""
+            />
+          </div>
+        </section>
+
+        <!-- Detail body content  -->
+        <section class="detail-bottom">
+          <h2 id="year">1889</h2>
+          <p id="description">
+            Although The Starry Night was painted during the day in Van Gogh's
+            ground-floor studio, it would be inaccurate to state that the
+            picture was painted from memory. The view has been identified as the
+            one from his bedroom window, facing east, a view which Van Gogh
+            painted variations of no fewer than twenty-one times, including The
+            Starry Night. "Through the iron-barred window," he wrote to his
+            brother, Theo, around 23 May 1889, "I can see an enclosed square of
+            wheat ... above which, in the morning, I watch the sun rise in all
+            its glory.
+          </p>
+          <a href="https://en.wikipedia.org/wiki/The_Starry_Night" id="source"
+            >GO TO SOURCE</a
+          >
+        </section>
+      </section>
+    </main>
+
+    <!-- Slideshow controller -->
+    <section class="controller">
+      <div class="container">
+        <div class="progress-bar">
+          <div class="inner-bar progress-1"></div>
+        </div>
+        <div class="controller-wrapper">
+          <div class="controller-content">
+            <h3 id="painting-name">Starry Night</h3>
+            <p id="painter-name">Vincent Van Gogh</p>
+          </div>
+          <div class="controller-nav">
+            <a href="./the-swing.html"><img id="back" src="./assets/shared/icon-back-button.svg" alt="" /></a>
+            <a href="./girl-with-pearl-earring.html"><img id="next" src="./assets/shared/icon-next-button.svg" alt="" /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <section class="overlay">
+      <div class="container">
+        <div class="lightbox-wrapper">
+          <button class="close" onclick="closeImage()">CLOSE</button>
+          <img
+            src="./assets/starry-night/gallery.jpg"
+            alt=""
+            id="gallery-img"
+          />
+        </div>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>
