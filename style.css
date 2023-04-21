@@ -116,6 +116,8 @@ header a {
 
 .card {
   width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
   margin-bottom: 24px;
   position: relative;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(0, 0, 0, 0.7));
@@ -187,13 +189,13 @@ header a {
 }
 @media only screen and (min-width: 1025px) {
   .gallery-grid {
-    margin-top: 2%;
-    -moz-column-gap: 2%;
-         column-gap: 2%;
+    margin-top: 3%;
+    -moz-column-gap: 3%;
+         column-gap: 3%;
   }
   .card {
-    width: 23.5%;
-    margin-bottom: 2%;
+    width: 22.75%;
+    margin-bottom: 3%;
   }
 }
 .detail-top {
